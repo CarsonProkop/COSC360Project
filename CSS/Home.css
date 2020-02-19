@@ -47,15 +47,113 @@ body{
 }
 
 
+
 /*Feature content Styling	*/
 .featureContent{
 	background-color:#6E6788;
+	height:400px;
+	width:60em;
+	margin-left:auto;
+	margin-right:auto;
+	
 }
 #mainElement{
 	float:left;
-	height:2em;
-	width:1em;
+	height:300px;
+	vertical-align:auto;
+	width:30em;
 }
+#mainElement figure{
+	position:relative;
+	width:400px;
+	vertical-align:center;
+	margin-bottom:4em;
+}
+#mainElement figcaption{
+	height:2em;
+	font-size:1.5em;
+	width:400px;
+	position:absolute;
+	bottom:3px;
+	
+}
+.featureContent figcaption{
+	background-color:black;
+	opacity:0.7;
+	color:white;
+}
+.featureContent #mainElement img{
+	max-width:100%;
+	height:auto;
+}
+
+
+/* Aux Content Styling */
+.auxContent figure{
+	position:relative;
+	width:215px;
+	vertical-align:center;
+	margin-bottom:1em;
+}
+
+.auxContent img{
+	height:125px;
+	width:215px;
+}
+
+.auxContent{
+	margin-left:15em;
+}
+.auxContent table{
+	border:none;
+	margin:none;
+	border-collapse:collapse;
+}
+
+.auxContent figcaption{
+	margin:0;
+	padding:0;
+	height:1em;
+	font-size:.75em;
+	width:215;
+	position:absolute;
+	bottom:3px;
+	background-color:black;
+	opacity:0.7;
+	color:white;
+}
+
+/* Other Content Styling*/
+.other{
+	margin-top:4em;
+}
+.other img{
+	width:250px;
+	
+}
+
+.other{
+	overflow: auto;
+	margin-bottm:4em;	
+	width:60em;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#6E6788;
+}
+.other figure{
+	float:left;
+	position:relative;
+}
+div .entry{
+	overflow:auto;
+}
+.linkbutton{
+	background-color:#69A89E;
+	text-decoration:none;
+	color:#BBB3DA;
+}
+
+
 
 /*Footer Styling*/
 
@@ -66,6 +164,7 @@ footer{
 	font-size:.5em;
 	text-align:center;
 	margin-bottom: 2em;
+	height: 8em;
 	}
 footer img{
 	height:25px;
@@ -81,5 +180,9 @@ footer .links a{
 	font-color:black;
 	
 }
+footer a{
+	text-decoration:none;
+}
+
 
 
