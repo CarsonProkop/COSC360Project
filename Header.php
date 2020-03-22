@@ -1,38 +1,6 @@
-<style>
-.logo{
-	width:100px;
-	height:100px;
-}
-
-header .siteSearch{
-	height:2em;
-	background-color:#6E6788;
-	
-	
-	border-radius:10px;
-}
-
-header{
-	background-color:#9D7189;
-	margin:0;
-	padding:0;
-}
-header a{
-	font-size:2em;
-}
-
-.navlist li{
-	display: inline-block;
-	padding: .5em;
-	margin:0em;
-}
-.navlist li a{
-	text-decoration:none;
-	color: purple;
-}
-</style>
-
-
+<head>
+	<link rel="stylesheet" href="CSS/Header.css"/>
+</head>
 
 <body>
 
@@ -48,25 +16,41 @@ header a{
 	
 	?>
 	
-	<div class="topnav">
-		<a class="<?php echo ($_SERVER['PHP_SELF'] == "http://localhost/COSC360Project/Genre.php" ? "active" : "");?>" href="Genre.php">Home</a>
-        <a class="<?php echo ($_SERVER['PHP_SELF'] == "COSC360Project/listprod.php" ? "active" : "");?>" href="listprod.php">Shop</a>
-        <a class="<?php echo ($_SERVER['PHP_SELF'] == "COSC360Project/showcart.php" ? "active" : "");?>" href="showcart.php">Shopping Cart</a>
-        <a class="<?php echo ($_SERVER['PHP_SELF'] == "COSC360Project/listorder.php" ? "active" : "");?>" href="listorder.php">All Orders</a>
+	<header>
+		<span class="navlist">
+		
+			<table>
+				<tr>
+					<td rowspan="2"><img class="logo" src="MEDIA/logo.jpg"/></td>
+					<td colspan = "4" class="siteTitle"><h1>Alpacapella</h1></td>
+					<?php 
+						if($user == null){
+							echo '<td ><a class="userLogin" href="Login.php">login</a> <a>/</a> <a class="userLogin" href="SignUp.php">sign-up</a>';
 	
-	
-	</div>
-	
-
-	<span class="navlist">
-		<ul>
-			<li><img class="logo" src="MEDIA/logo.jpg"/></li>
-			<li><a href="" >Genre </a></li>
-			<li><a href="" >Artist </a></li>
-			<li><a href="" >Album </a></li>
-			<li><a href="" >Songs </a></li>
-			<li><a>Search: </a><input class="siteSearch" type="text"></input></li>
+						}else {
 			
-		</ul>
-	</span>
+							echo '<td ><img class="headerProfPic" src=$_SESSION["userPicture"]/><a class="userLogin" href="MyAccount.php">My Account</a>';
+						}
+					
+					
+					
+					?>
+				
+				</tr>
+				<tr>
+					
+					<td colspan="7"><input placeholder="Search" class="siteSearch" type="text"></input></td>
+					
+				</tr>
+				<tr>
+					<td><a href="Genre.php" >Genre</a></td>
+					<td><a href="Artist.php">Artist </a></td>
+					<td><a href="Album.php" >Album </a></td>
+					<td><a href="Songs.php" >Songs </a></td>
+				</tr>
+			</table>
+			
+		</span>
+	</header>
+	
 </body>
