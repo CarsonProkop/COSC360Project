@@ -1,3 +1,16 @@
+<?php 
+	include 'header.php';
+
+	if(isset($_SESSION["registeredUser"])){
+		$user = $_SESSION["registeredUser"];
+	}else{
+		$user = null;
+	}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -5,19 +18,6 @@
 		<link rel="stylesheet" href="CSS/Home.css"/>
 		<title>Alpacapella</title>
 	</head>
-	<header>
-		<span class="navlist">
-			<ul>
-				<li><img class="logo" src="MEDIA/logo.jpg"/></li>
-				<li><a href="" >Genre </a></li>
-				<li><a href="" >Artist </a></li>
-				<li><a href="" >Album </a></li>
-				<li><a href="" >Songs </a></li>
-				<li><a>Search: </a><input class="siteSearch" type="text"></input></li>
-				
-			</ul>
-		</span>
-	</header>
 	
 	<body>
 		<div id="main">
@@ -29,42 +29,57 @@
 						<figcaption>Who is the real drizzy shady</figcaption>
 					</figure>
 				</div>
-				<div class="auxContent">
-					<table>
-						<tr>
-							<td>
-								<figure>
-									<img src="MEDIA/Justin.jpg"></img>
-									<figcaption>Lorem Ipsum</figcaption>
-								</figure>
-							</td>
-							<td>
-								<figure>
-									<img src="MEDIA/Tpain.jpg"></img>
-									<figcaption>Lorem Ipsum</figcaption>
-								</figure>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<figure>
-									<img src="MEDIA/SummerSalt.jpg"></img>
-									<figcaption>Lorem Ipsum</figcaption>
-								</figure>
-							</td>
-							<td>
-								<figure>
-									<img src="MEDIA/Bahamas.jpg"></img>
-									<figcaption>Lorem Ipsum</figcaption>
-								</figure>
-							</td>
-						</tr>
-					
-					</table>
-				</div>
-			
 			</div>
 		</div>
+		
+		<div class="auxContent">
+			<table>
+				<tr>
+					<td class="aux1-img">
+						<figure>
+							<img src="MEDIA/Justin.jpg">
+							<figcaption>Lorem Ipsum</figcaption>
+						</figure>
+					</td>
+					<td class="aux2-img">
+						<figure>
+							<img src="MEDIA/Tpain.jpg">
+							<figcaption>Lorem Ipsum</figcaption>
+						</figure>
+					</td>
+					<td class="aux3-img">
+						<figure>
+							<img src="MEDIA/SummerSalt.jpg">
+							<figcaption>Lorem Ipsum</figcaption>
+						</figure>
+					</td>
+					
+					
+				</tr>
+				<tr>
+					<td class="aux1-article">
+						<a class="aux-link" href="">Justin Beiber comeback</a>
+					</td>
+					<td class="aux2-article">
+						<a class="aux-link" href="">Tpain's tiny desk concert is heat</a>
+					</td>
+					<td class="aux3-article">
+						<a class="aux-link" href="">Texas' take on Hawaii</a>
+					</td>	
+				</tr>
+			
+			</table>
+		</div>
+		
+		
+		<div class="memes">
+			
+		
+		
+		</div>
+		
+		
+		
 		
 		<div class="other">
 		<h1>Other Blogs</h1>
@@ -98,38 +113,29 @@
 		</div>
 		
 	
+		
+		<footer>
+			<div class="links">
+				<ul>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="https://www.reddit.com/r/dankmemes/">More Memes</a></li>
+					<li><a href="#">Contact</a></li>
+				
+				</ul>
+				
+				
+				
+				
+			</div>
+			
+			<div class="Social">
+				<h2>Developer Social Media</h2>
+				<img src="MEDIA/instagram.png"> Carson Prokopuik </img>
+				<img src="MEDIA/instagram.png"> Tahmeed Hossain </img>
+				
+			</div>
+		</footer>
 	</body>
 	
-	<footer>
-		<div class="links">
-			<ul>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="https://www.reddit.com/r/dankmemes/">More Memes</a></li>
-				<li><a href="#">Contact</a></li>
-			
-			</ul>
-			
-			
-			
-			
-		</div>
-		
-		<div class="Social">
-			<h2>Developer Social Media<h2>
-			<img src="MEDIA/instagram.png"> Carson Prokopuik </img>
-			<img src="MEDIA/instagram.png"> Tahmeed Hossain </img>
-			
-		</div>
-	</footer>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-</html
+</html>
