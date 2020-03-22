@@ -55,6 +55,7 @@ body{
 	width:60em;
 	margin-left:auto;
 	margin-right:auto;
+	text-align:center;
 	
 }
 #mainElement{
@@ -67,7 +68,7 @@ body{
 	position:relative;
 	width:400px;
 	vertical-align:center;
-	margin-bottom:4em;
+	margin-bottom:2em;
 }
 #mainElement figcaption{
 	height:2em;
@@ -102,12 +103,22 @@ body{
 }
 
 .auxContent{
-	margin-left:15em;
+	margin-left:25em;
+	padding:0em;
+
 }
 .auxContent table{
 	border:none;
 	margin:none;
 	border-collapse:collapse;
+	
+}
+.auxContent td{
+	border:none;
+	margin:0em;
+	border-collapse:collapse;
+	padding:0em;
+	
 }
 
 .auxContent figcaption{
@@ -115,7 +126,7 @@ body{
 	padding:0;
 	height:1em;
 	font-size:.75em;
-	width:215;
+	width:215px;
 	position:absolute;
 	bottom:3px;
 	background-color:black;
