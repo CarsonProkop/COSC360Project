@@ -1,5 +1,6 @@
 <?php 
 	include 'header.php';
+	
 
 	if(isset($_SESSION["registeredUser"])){
 		$user = $_SESSION["registeredUser"];
@@ -20,6 +21,34 @@
 	</head>
 	
 	<body>
+		<div class="media-column">
+			<div class="first-block">
+				<div class="form-wrapper">
+					<h2>Wait, don't we know you?</h2>
+					<form>
+						<p>Username:</p><input type="text" name="username"/><br>
+						<p>Password:</p><input type="password" name="password"/><br><br>
+						<input type="submit" value="Log In"/>
+					</form>
+				</div>
+			
+			</div>
+			
+			<div class="twitter-feed">
+				<a class="twitter-timeline" href="https://twitter.com/musicfeeds?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">National Park Tweets - Curated tweets by TwitterDev</a>
+				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			
+			</div>
+			
+			<div class="ads">
+				
+			
+			</div>
+		
+		
+		</div>
+	
+	
 		<div id="main">
 			<div class="featureContent">
 			<h1>Feature Content	</h1>
@@ -31,6 +60,7 @@
 				</div>
 			</div>
 		</div>
+		
 		
 		<div class="auxContent">
 			<table>
@@ -56,7 +86,7 @@
 					
 					
 				</tr>
-				<tr>
+				<tr class="auxrow">
 					<td class="aux1-article">
 						<a class="aux-link" href="">Justin Beiber comeback</a>
 					</td>
@@ -112,30 +142,11 @@
 			</div>		
 		</div>
 		
-	
+		<?php 
+			include 'Footer.php';
+		?>
 		
-		<footer>
-			<div class="links">
-				<ul>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="https://www.reddit.com/r/dankmemes/">More Memes</a></li>
-					<li><a href="#">Contact</a></li>
-				
-				</ul>
-				
-				
-				
-				
-			</div>
-			
-			<div class="Social">
-				<h2>Developer Social Media</h2>
-				<img src="MEDIA/instagram.png"> Carson Prokopuik </img>
-				<img src="MEDIA/instagram.png"> Tahmeed Hossain </img>
-				
-			</div>
-		</footer>
+		
 	</body>
 	
 </html>

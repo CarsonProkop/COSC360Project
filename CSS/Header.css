@@ -25,17 +25,25 @@ header .siteTitle{
 
 header table{
 	border-collapse:collapse;
+	width:100%;
+	border:none;
 }
 header td{
 	padding:0.5em;
 	margin-top:1em;
+	border:none;
+	text-align:center;
 }
 header ::placeholder{
 	color:black;
 }
+header .search-cell{
+	text-align:none;
+}
 
 
 .logo{
+	display:block;
 	width:100px;
 	height:100px;
 }
@@ -50,10 +58,10 @@ header .siteSearch{
 }
 
 header{
-	background-color:#9D7189;
-	margin-left:5em;
-	margin-right:5em;
-	margin-top:2em;
+	background-color:#6E6788;
+	margin-left:0em;
+	margin-right:0em;
+	margin-top:0em;
 	margin-bottom :2em;
 	padding:0;
 }
@@ -79,6 +87,12 @@ header a{
 	border-radius:50%;
 }
 
-
+.navlist{
+	text-align:center;
+}
+.navlist input{
+	width:60%;
+	background-color:#E0C9DD;
+}
 
 

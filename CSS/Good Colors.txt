@@ -1,0 +1,2 @@
+#EAEAEA -- background stuff
+#E0BADA -- content stuff?

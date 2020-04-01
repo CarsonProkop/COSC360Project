@@ -17,12 +17,12 @@
 	?>
 	
 	<header>
-		<span class="navlist">
+		<div class="navlist">
 		
 			<table>
 				<tr>
-					<td rowspan="2"><img class="logo" src="MEDIA/logo.jpg"/></td>
-					<td colspan = "4" class="siteTitle"><h1>Alpacapella</h1></td>
+					<td rowspan="2"><a href="Home.php"><img class="logo" src="MEDIA/logo.jpg"/></a></td>
+					<td colspan = "2" class="siteTitle"><h1>Alpacapella</h1></td>
 					<?php 
 						if($user == null){
 							echo '<td ><a class="userLogin" href="Login.php">login</a> <a>/</a> <a class="userLogin" href="SignUp.php">sign-up</a>';
@@ -39,7 +39,7 @@
 				</tr>
 				<tr>
 					
-					<td colspan="7"><input placeholder="Search" class="siteSearch" type="text"></input></td>
+					<td colspan="2" class="search-cell"><input placeholder="Search" class="siteSearch" type="text"></input></td>
 					
 				</tr>
 				<tr>
@@ -50,7 +50,7 @@
 				</tr>
 			</table>
 			
-		</span>
+		</div>
 	</header>
 	
 </body>
