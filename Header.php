@@ -43,10 +43,10 @@
 					
 				</tr>
 				<tr>
-					<td><a href="Genre.php" >Genre</a></td>
-					<td><a href="Artist.php">Artist </a></td>
-					<td><a href="Album.php" >Album </a></td>
-					<td><a href="Songs.php" >Songs </a></td>
+					<td><a href="./Blogbrowser.php?Send=Genre" >Genre</a></td>
+					<td><a href="Blogbrowser.php?Send=Artist">Artist </a></td>
+					<td><a href="Blogbrowser.php?Send=Album" >Album </a></td>
+					<td><a href="Blogbrowser.php?Send=Songs" >Songs </a></td>
 				</tr>
 			</table>
 			

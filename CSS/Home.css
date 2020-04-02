@@ -110,34 +110,7 @@ body{
 }
 
 
-/*------------------- Media Content Styling---------------------*/
 
-.first-block{
-	display:block;
-	background-color:#E0C9DD;
-	
-}
-.form-wrapper{
-	text-align:center;
-	padding:1em;
-	margin:2em;
-}
-
-
-.media-column{
-	height:71em;
-	width:20em;
-	background-color:#6E6788;
-	float:right;
-	margin-right:5em;
-	padding:2em;
-}
-
-.twitter-feed{
-	height:30em;
-	overflow:auto;
-	
-}
 
 
 
@@ -145,7 +118,7 @@ body{
 .memes{
 	margin-top:4em;
 	overflow: auto;
-	margin-bottm:4em;	
+	margin-bottom:4em;	
 	background-color:#E0C9DD;
 }
 

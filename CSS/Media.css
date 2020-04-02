@@ -1,0 +1,35 @@
+/*------------------- Media Content Styling---------------------*/
+
+.first-block{
+	display:block;
+	background-color:#E0C9DD;
+	
+}
+.form-wrapper{
+	text-align:center;
+	padding:1em;
+	height:25%;
+	margin-bottom:2em;
+}
+
+
+.media-column{
+	/*height:130%;*/
+	height:auto;
+	width:20em;
+	background-color:#6E6788;
+	float:right;
+	margin-right:5em;
+	padding:2em;
+}
+
+.twitter-feed{
+	height:100%;
+	overflow:scroll;
+	
+}
+
+.feed-wrapper{
+	height:100%;
+	height:50%;
+}
