@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
   <meta charset="utf-8">
-  <title>TrapBuzz. Your words online.</title>
+  <title>Alpacapella. Your words online.</title>
   <link rel="logo icon" href="MEDIA/Logo_base.jpg" />
   <link rel="stylesheet" href="client/css/reset.css">
   <link rel="stylesheet" href="client/css/signup.css">
