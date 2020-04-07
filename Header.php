@@ -1,9 +1,3 @@
-<head>
-	<link rel="stylesheet" href="CSS/Header.css"/>
-</head>
-
-<body>
-
 	<?php 
 		session_start();
 		if(isset($_SESSION["authenticatedUser"])){
@@ -15,6 +9,15 @@
 	
 	
 	?>
+
+<head>
+	<link rel="stylesheet" href="CSS/Default.css"/>
+	<link rel="stylesheet" href="CSS/Header.css"/>
+</head>
+
+<body>
+
+
 	
 	<header>
 		<div class="navlist">
@@ -25,11 +28,11 @@
 					<td colspan = "2" class="siteTitle"><h1>Alpacapella</h1></td>
 					<?php 
 						if($user == null){
-							echo '<td ><a class="userLogin" href="Login.php">login</a> <a>/</a> <a class="userLogin" href="SignUp.php">sign-up</a>';
+							echo '<td><a class="userLogin" href="Login.php">login</a> <a>/</a> <a class="userLogin" href="SignUp.php">sign-up</a></td>';
 	
 						}else {
 			
-							echo '<td ><img class="headerProfPic" src=$_SESSION["userPicture"]/><a class="userLogin" href="MyAccount.php">My Account</a>';
+							echo '<td><img class="headerProfPic" src=$_SESSION["userPicture"]/><a class="userLogin" href="MyAccount.php">My Account</a></td>';
 						}
 					
 					

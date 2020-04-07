@@ -16,6 +16,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" href="CSS/Default.css"/>
 		<link rel="stylesheet" href="CSS/Home.css"/>
 		<title>Alpacapella</title>
 	</head>

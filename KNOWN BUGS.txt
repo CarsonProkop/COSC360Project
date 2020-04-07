@@ -1,0 +1,2 @@
+1.	Cant get the media column to scale correctly when going from home to say blogbrowser... i tried using percentages but
+	i think its reference a different parent than i expect... will look deeper later 

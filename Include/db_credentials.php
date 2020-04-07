@@ -2,10 +2,19 @@
 
 <?php
 	// NEEDS TO BE CHANGED TO FIT OUR DB
-
-	$username = "cprokopu";
-	$password = "102898";
-	$database = "db_" . $username;
-	$server = "sql04.ok.ubc.ca";
-	$connectionInfo = array( "Database"=>$database, "UID"=>$username, "PWD"=>$password, "CharacterSet" => "UTF-8");
+	function openconnection(){
+		$dbhost = "localhost";
+		$dbuser = "root";
+		$dbpass = "";
+		$db = "cosc360proj";
+		
+		$conn = new mysqli($dbhost, $dbuser, $dbpass, $db) or die("Failed to connect to " . $db);
+		return $conn;
+	}
+	
+	
+	function closeConn($conn){
+		$conn -> close();
+	}
+	
 ?>

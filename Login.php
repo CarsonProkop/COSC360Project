@@ -20,6 +20,10 @@
 				<input type="submit" value="Log In"/>
 				
 			</form>
+			<br>
+			<div class="aux">
+				<a href="Forgotpassword.php">Forgot your Password?</a> <a>/ </a><a href="Signup.php">Don't have an account?</a>
+			</div>
 		</div>
 	
 	</div>

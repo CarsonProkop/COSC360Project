@@ -1,3 +1,5 @@
+
+
 .Sort{
 	margin-left:5em;
 	margin-right:35em;
@@ -28,7 +30,6 @@ div .entry {
 
 .entry figure{
 	float: left;
-	/* ask why this fixed it */
 	position: relative;
 }
 
