@@ -7,6 +7,7 @@
 
 
 <footer>
+	
 	<div class="links">
 		<ul>
 			<li><a href="#">About Us</a></li>
@@ -35,7 +36,7 @@
 				</td>
 			</tr>
 		</table>
-		
-		
 	</div>
+	<br>
+	<em>Copyright &copy; 2020 ALPACAPELLA - ALL RIGHTS RESERVED</em>
 </footer>

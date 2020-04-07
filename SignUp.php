@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+	include 'Header.php';
+?>
+
+
 <html>
 <head lang="en">
   <meta charset="utf-8">
@@ -48,9 +53,11 @@
       <p id="sneak"> Sneak in with minimum accessibility? <a href="Home.php"> Enter</a> </p>
     </div>
   </div>
-  <footer>
-    <em>Copyright &copy; 2020 ALPACAPELLA - ALL RIGHTS RESERVED</em>
-  </footer>
+
 </body>
 
 </html>
+
+<?php
+	include 'Footer.php';
+?>
