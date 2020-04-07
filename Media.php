@@ -1,7 +1,7 @@
 <html>	
 	
 		<head>
-			<link rel="stylesheet" href="CSS/Media.css">
+			<link rel="stylesheet" href="CSS/Media.css"/>
 		</head>
 	
 	
