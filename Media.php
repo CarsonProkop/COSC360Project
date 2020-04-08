@@ -1,5 +1,5 @@
 <?php 
-	session_start();
+	//session_start();
 	if(isset($_SESSION["authenticatedUser"])){
 		$user = $_SESSION["authenticatedUser"];
 	}else{
@@ -19,9 +19,12 @@
 			<div class="first-block">
 				<?php
 					if($user != null){
-						echo'
-							<h2>Hey ' . $user . ' let\'s make a new post</h2>';
-							include 'Startblog.php';
+						echo 	'<div class="create-wrapper">';
+						echo 	'<div>
+									<h2>Hey ' . $user . ' let\'s make a new post</h2>
+								</div>';
+						include 'Startblog.php';
+						echo 	'</div>';
 						
 					}else{
 						// not logged in so offer to login

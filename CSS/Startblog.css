@@ -3,5 +3,8 @@ p{
 }
 
 .start-blog-wrapper{
-	
+	text-align:center;
+}
+.start-blog h3{
+	margin:0em;
 }

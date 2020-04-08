@@ -1,5 +1,5 @@
 	<?php 
-
+		session_start();
 		if(isset($_SESSION["authenticatedUser"])){
 			$user = $_SESSION["authenticatedUser"];
 		}else{
@@ -29,8 +29,8 @@
 							echo '<td><a class="userLogin" href="Login.php">login</a> <a>/</a> <a class="userLogin" href="SignUp.php">sign-up</a></td>';
 	
 						}else {
-							echo'<script>alert("profPic: '. $_SESSION["profPic"] .'");</script>';
-							echo '<td><img class="headerProfPic" src="'. $_SESSION["profPic"] . '"/><a class="userLogin" href="MyAccount.php">My Account</a> <a>/</a> <a class="userLogin" href="LogOut.php">Log Out</a></td>';
+							
+							echo '<td><img class="headerProfPic" src="'. $_SESSION["profPic"] . '"/><a class="userLogin" href="MyAccount.php"> My Account</a> <a>/</a> <a class="userLogin" href="LogOut.php">Log Out</a></td>';
 						}
 					
 					
