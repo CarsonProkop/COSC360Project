@@ -1,3 +1,12 @@
+<?php 
+	session_start();
+	if(isset($_SESSION["authenticatedUser"])){
+		$user = $_SESSION["authenticatedUser"];
+	}else{
+		$user = null;
+	}
+?>
+
 <html>	
 	
 		<head>
@@ -8,14 +17,31 @@
 	
 	<div class="media-column">
 			<div class="first-block">
-				<div class="form-wrapper">
-					<h2>Wait, don't we know you?</h2>
-					<form>
-						<p>Username:</p><input type="text" name="username"/><br>
-						<p>Password:</p><input type="password" name="password"/><br><br>
-						<input type="submit" value="Log In"/>
-					</form>
-				</div>
+				<?php
+					if($user != null){
+						echo'
+							<h2>Hey ' . $user . ' let\'s make a new post</h2>';
+							include 'Startblog.php';
+						
+					}else{
+						// not logged in so offer to login
+						
+						echo 	'<div class="form-wrapper">
+									<h2>Wait, don\'t we know you?</h2>
+									<form method="POST" action="validateLogin.php">
+										<p>Username:</p><input type="text" name="username"/><br>
+										<p>Password:</p><input type="password" name="password"/><br><br>
+										<input type="submit" value="Log In"/>
+									</form>
+								</div>';
+						
+					}
+				
+				
+				?>
+				
+				
+				
 			
 			</div>
 			

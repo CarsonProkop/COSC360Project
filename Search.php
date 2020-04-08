@@ -18,6 +18,7 @@
 						<figcaption>' . $row['title'] . '</figcaption>
 					</figure>
 					<div>
+						<h2>' . $row['opID'] . ' ' . $row['upload_date']. '</h2>
 						<p>' . substr($row['content'], 0, 300); . "..." . '</p>
 						<div class="right">
 							<a href="#" class="linkbutton">Read More</a>

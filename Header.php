@@ -1,10 +1,11 @@
 	<?php 
-		session_start();
+
 		if(isset($_SESSION["authenticatedUser"])){
 			$user = $_SESSION["authenticatedUser"];
 		}else{
 			$user = NULL;
-		}	
+		}
+		
 	?>
 
 <head>
@@ -28,8 +29,8 @@
 							echo '<td><a class="userLogin" href="Login.php">login</a> <a>/</a> <a class="userLogin" href="SignUp.php">sign-up</a></td>';
 	
 						}else {
-			
-							echo '<td><img class="headerProfPic" src=$_SESSION["userPicture"]/><a class="userLogin" href="MyAccount.php">My Account</a></td>';
+							echo'<script>alert("profPic: '. $_SESSION["profPic"] .'");</script>';
+							echo '<td><img class="headerProfPic" src="'. $_SESSION["profPic"] . '"/><a class="userLogin" href="MyAccount.php">My Account</a> <a>/</a> <a class="userLogin" href="LogOut.php">Log Out</a></td>';
 						}
 					
 					
