@@ -1,0 +1,99 @@
+I. Users Requirements
+
+•Browse items without registering (/2)
+	DONE
+
+•Responsive design philosophy (minimum requirements for different non-mobile display sizes) (/2)
+	IDK
+
+•Server side security and validation - best practices for password handling (/2)
+	CARSON
+ 
+•Search for items/posts by keyword without registering (/2)
+	CARSON
+
+•Item and associated details stored in the database (/2)
+	TAHMEED / CARSON?
+	
+•Form validation with JavaScript (/2) 
+	TAHMEED
+	
+•Register at the site by providing their name, e-mail and image (/4) 
+	TAHMEED
+
+•Allow user login by providing user id and password (/2)
+	CARSON
+
+•Create and comment on (specific for each project) when logged into the site (/2)
+	CARSON
+ 
+•Users are required to be able to view/edit their profile (/2) 
+	CARSON
+
+•User password recovery (via email) (/4) 
+	TAHMEED
+
+•Error handling/bad navigation (/2) 
+	TAHMEED
+
+•Site must maintain state (user state being logged on, Shopping cart is persistent between sessions  (/4)
+	KINDA BOTH?
+
+ 
+II. Website administrator’s objectives:
+•Search for user by name, email or post ( /2) 
+	CARSON
+
+•Enable/disable users (/2)
+	CARSON 
+ 
+•Edit/remove items and comments (you must be able to add items to the store, along with images of the items as well as setting the required information) (/4) 
+	
+
+
+
+
+III. Additional Requirements
+
+•Search and analysis for topics (/3)
+	??
+
+•Hot threads/hot item tracking (/3) 
+	CARSON
+
+•Visual display of updates, etc (site usage charts, etc) (/3) 
+	TAHMEED?
+
+•Asynchronous updates of the cart (/4)
+	
+
+•Activity by date (/3)
+	CARSON?
+
+•Collapsible items/threads without page reloading (/3)
+	???
+
+•Alerts on page changes (/3) 
+	TAHMEED??
+
+•Admin view reports on usage (with filtering) (/3)
+	SHOULD BE IN DB? JUST NEED TO VISUALIZE IT SOOO...
+
+•Styling flourishes (/3)
+	BOTH
+
+•Your choice (this is your opportunity to add additional flourish’s to your site but will need to be documented in the final report) (/3 or /4)
+	ARGUABLY THE TWITTER FEED??
+
+
+
+
+
+
+
+
+
+
+
+
+
