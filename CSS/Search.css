@@ -1,0 +1,62 @@
+
+
+.Sort{
+	margin-left:5em;
+	margin-right:35em;
+	background-color:#E0C9DD;
+}
+
+.Blog-List{
+	background-color:#E0C9DD;
+	margin-left:5em;
+	margin-right:35em;
+}
+
+div .entry {
+	border-top: 2px solid #ff8800;
+	overflow: auto;
+	margin:2em;
+}
+
+.linkbutton{
+	background: #ff8800;
+	border: none;
+	color: white;
+	padding:.5em;
+	float: right;
+	text-decoration: none;
+	
+}
+
+.entry figure{
+	float: left;
+	position: relative;
+}
+
+.entry img{
+	width:25%;
+}
+
+
+.overlayed{
+	
+	position: absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+
+
+}
+
+figcaption{
+
+	
+	background:black;
+	opacity: 0.6;
+	color: white;
+	position:absolute;
+	bottom:3px;
+	left:0px;
+	width: 147px;
+	padding-left:.2em;
+}
