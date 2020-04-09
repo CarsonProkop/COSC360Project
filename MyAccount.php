@@ -26,15 +26,71 @@
 	$email = $userData['email'];
 	$birthday = $userData['birthday'];
 	$password = $userData['password'];
-	$firstName = $userData['date_signed_up'];
+	$dateSignedUp = $userData['date_signed_up'];
 	$about = $userData['about'];
 	if(file_exists('MEDIA/User/' . $userName . '/prof-pic.jpg')){
-		$profPic = fopen('MEDIA/User/' . $userName . '/prof-pic.jpg', 'r+');
+		$profPic = 'MEDIA/User/' . $userName . '/prof-pic.jpg';
+	}else{
+		$profPic = null;
 	}	
 	
 ?>
 
-	<h1>Account info for <?php echo $userName;?><h1>
+<head lang="en">
+  <meta charset="utf-8">
+  <title>Alpacapella. Your words online.</title>
+  <link rel="logo icon" href="MEDIA/Logo_base.jpg" />
+  <link rel="stylesheet" href="client/css/reset.css">
+  <link rel="stylesheet" href="CSS/MyAccount.css">
+  <script type="text/javascript" src="client/javascript/dropdown.js"></script>
+  <script type="text/javascript" src="client/javascript/validation.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src = "client/javascript/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+	<div>
+		<div id="left_side">
+		  <h1 class = "left_text"> Write. </h1>
+		  <h1 class = "left_text"> Share. </h1>
+		  <h1 class = "left_text"> Grow. </h1>
+		</div>
+		<div id = "right_side">
+			<section id = "main_right">
+			<?php
+				// figure out what image to display
+				if($profPic!=null){
+					$toDisplay = $profPic;
+				}else{
+					$toDisplay = "MEDIA/Anonymous.png";
+				}
+			?>
+			
+			
+
+			<h1>User settings for <?php echo $userName;?>:</h1>
+			<img class = "icons" id = "logo" src="<?php echo $toDisplay; ?>" alt="logo"/>
+			<form id="edit_prof" method="post" action="Updatecust.php" enctype="multipart/form-data">
+				<p id="Change-pic"> Change profile picture: <input type="file" name="newProfPic"/> </p>
+				<input class="signup_input1" type="text" name="Fname" placeholder="<?php echo $firstName;?>">
+				<input class="signup_input1" type="text" name="Lname" placeholder="<?php echo $lastName;?>">
+				<input class="signup_input2" type="text" name="userid" placeholder="<?php echo $userName;?>">
+					<?php if(isset($name_error)): ?>
+				<script> document.forms["signup"]["userid"].style.borderColor = "red"; </script>
+				<?php endif ?>
+				<input class="signup_input2" type="email" name="useremail" placeholder="<?php echo $email;?>"/>
+				<p>Birthday: </p><input class="signup_input2" type="date" name="birthday" value="<?php echo $birthday;?>"/>
+				<input class="signup_input2" type="password" name="olduserpwd" placeholder="Old password"/>
+				<input class="signup_input2" type="password" name="newuserpwd" placeholder="New password"/>
+				<input class="signup_input2" type="password" name="re_userpwd" placeholder="Confirm password"/>
+				<input id="submit_2" type="submit" name="submit_update" value="SubmitChanges"/>
+			</form>
+
+		  </section>
+		</div>
+	</div>
+
+</body>
 
 
 
@@ -43,4 +99,4 @@
 <?php
 	include 'Footer.php';
 ?>
-<HTML>
+</HTML>
