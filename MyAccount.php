@@ -72,14 +72,15 @@
 			<img class = "icons" id = "logo" src="<?php echo $toDisplay; ?>" alt="logo"/>
 			<form id="edit_prof" method="post" action="Updatecust.php" enctype="multipart/form-data">
 				<p id="Change-pic"> Change profile picture: <input type="file" name="newProfPic"/> </p>
-				<input class="signup_input1" type="text" name="Fname" placeholder="<?php echo $firstName;?>">
-				<input class="signup_input1" type="text" name="Lname" placeholder="<?php echo $lastName;?>">
-				<input class="signup_input2" type="text" name="userid" placeholder="<?php echo $userName;?>">
+				<input class="signup_input1" type="text" placeholder="First name" name="Fname" value="<?php echo $firstName;?>">
+				<input class="signup_input1" type="text" placeholder="Last name" name="Lname" value="<?php echo $lastName;?>">
+				<input class="signup_input2" type="text" placeholder="Username" name="userid" value="<?php echo $userName;?>">
 					<?php if(isset($name_error)): ?>
 				<script> document.forms["signup"]["userid"].style.borderColor = "red"; </script>
 				<?php endif ?>
-				<input class="signup_input2" type="email" name="useremail" placeholder="<?php echo $email;?>"/>
+				<input class="signup_input2" type="email" placeholder="Email" name="useremail" value="<?php echo $email;?>"/>
 				<p>Birthday: </p><input class="signup_input2" type="date" name="birthday" value="<?php echo $birthday;?>"/>
+				<p>Tell us about your self</p><textarea class="signup_input2" name="about" cols="30" rows="5"><?php echo $about;?></textarea>
 				<input class="signup_input2" type="password" name="olduserpwd" placeholder="Old password"/>
 				<input class="signup_input2" type="password" name="newuserpwd" placeholder="New password"/>
 				<input class="signup_input2" type="password" name="re_userpwd" placeholder="Confirm password"/>

@@ -36,10 +36,6 @@ footer {
   height: 4em;
 }
 
-#sign_in {
-  text-align: right;
-  padding-top: 0.25em;
-}
 
 .signup_input1 {
   padding: 12px;
@@ -79,16 +75,16 @@ section {
   position: relative;
   font-family: Helvetica, Arial, Verdana;
   text-align: center;
-  top: 20%;
+  top: 0%;
 }
 
 #Change-pic {
-	margin-top:1em;
+	margin-top:.5em;
 	font-size: 0.55em;
 	font-family: Verdana, Helvetica, Arial;
 	position: relative;
 	text-align: center;
-	top: 40%;
+	top: 20%;
 }
 
 #top_right {
