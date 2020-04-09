@@ -36,35 +36,35 @@
 			</table>
 		</div>
 		
-		<div class="Blog-List">
-		
-		
-			<div class="entry">
-				<figure>
-				  <img src="MEDIA/Drake.jpg" alt="" />
-				  <figcaption>Drake</figcaption>
-			   </figure>
-			   <div>
-				  <h2>Who is the real drizzy shady</h2>
-				  <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules.</p>
-				  <div class="right">
-					 <a href="#" class="linkbutton">Read More</a>
-				  </div>
-			   </div>
-			</div>
-			
-			<div class="entry">
-				<figure>
-				  <img src="MEDIA/Drake.jpg" alt="" />
-				  <figcaption>Drake</figcaption>
-			   </figure>
-			   <div>
-				  <h2>Who is the real drizzy shady</h2>
-				  <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules.</p>
-				  <div class="right">
-					 <a href="#" class="linkbutton">Read More</a>
-				  </div>
-			   </div>
+		<div class="list-wrapper">
+			<div class="Blog-List">
+				<div class="entry">
+					<figure>
+					  <img src="MEDIA/Drake.jpg" alt="" />
+					  <figcaption>Drake</figcaption>
+				   </figure>
+				   <div>
+					  <h2>Who is the real drizzy shady</h2>
+					  <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules.</p>
+					  <div class="right">
+						 <a href="#" class="linkbutton">Read More</a>
+					  </div>
+				   </div>
+				</div>
+				
+				<div class="entry">
+					<figure>
+					  <img src="MEDIA/Drake.jpg" alt="" />
+					  <figcaption>Drake</figcaption>
+				   </figure>
+				   <div>
+					  <h2>Who is the real drizzy shady</h2>
+					  <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules.</p>
+					  <div class="right">
+						 <a href="#" class="linkbutton">Read More</a>
+					  </div>
+				   </div>
+				</div>
 			</div>
 		</div>
 		

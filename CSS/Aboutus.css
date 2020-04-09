@@ -1,0 +1,42 @@
+
+/*	LEFT SIDE */
+#left_side {
+  background-color: #443266;
+  float: left;
+  height: 58em;
+  width: 50%;
+  max-height: 60em;
+}
+
+.left_text {
+  position: relative;
+  text-align: center;
+  font-family: Helvetica, Arial, Verdana;
+  color: #FFFFFF;
+  top: 30%;
+}
+
+
+/*	Right SIDE */
+
+#right_side {
+	
+	text-align:center;
+	background-color: #FFFFFF;
+	height: 58em;
+	border-bottom: 1px solid #F5F5F5;
+	max-height: 60em;
+}
+
+.title{
+	margin-left:50%;
+	border-bottom: 1px solid black;
+	width:50%;
+}
+
+.dev-photo {
+  position: relative;
+  top: 1em;
+  width: 4em;
+  height: 4em;
+}

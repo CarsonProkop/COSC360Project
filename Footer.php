@@ -10,7 +10,7 @@
 	
 	<div class="links">
 		<ul>
-			<li><a href="#">About Us</a></li>
+			<li><a href="Aboutus.php">About Us</a></li>
 			<li><a href="#">Contact</a></li>
 			<li><a href="https://www.reddit.com/r/dankmemes/">More Memes</a></li>
 			<li><a href="#">Contact</a></li>

@@ -1,4 +1,9 @@
-
+.list-wrapper{
+	height:100%;
+}
+table, td{
+	border:none;
+}
 
 .Sort{
 	margin-left:5em;
@@ -10,6 +15,7 @@
 	background-color:#E0C9DD;
 	margin-left:5em;
 	margin-right:35em;
+	scroll:auto;
 }
 
 div .entry {

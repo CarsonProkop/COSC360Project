@@ -1,7 +1,9 @@
 <?php
+	$_SESSION['AdminFilter'] = 0;
 	include 'Header.php';
 	include 'Include/db_credentials.php';
-	
+	include 'Adminfunctions.php';
+	include 'Tools.php';
 	$dataTypes = array('customers', 'admin', 'blogpost', 'comments');
 	
 	if(isset($_GET['data'])){
@@ -34,6 +36,18 @@
 	
 	
 ?>
+<script>
+	function applyFilter(){
+		
+		
+		
+	}
+
+</script>
+
+
+
+
 
 <head lang="en">
   <meta charset="utf-8">
@@ -56,6 +70,16 @@
 				<a href="Sitestuff.php?data=blogpost">Blogposts</a>
 				<a href="Sitestuff.php?data=comments">Comments</a>
 				<a href="Sitestuff.php?data=admin">Admin</a>
+			</div><br>
+			<div>
+				<form action="Adminfunctions.php" method="get">
+					<label><b>Search <?php echo $data;?> by <?php echo $entity;?>: </b></label>
+					<input type="text" name="search"/>
+					<input type="hidden" name="fromFilter" value="true">
+					<input type="hidden" name="entity" value="<?php echo $entity;?>">
+					<input type="hidden" name="table" value="<?php echo $data;?>">
+					<input type="Submit" value="Search"/>
+				</form>
 			</div>
 		</div>
 		<div class = "Data-area">
@@ -63,7 +87,10 @@
 			<h1>Displaying: <?php echo $data;?></h1>
 			<?php
 				/// GET DATA ///
-				$dataResults = getData($data);
+					
+				$dataResults = getData($data,'',$entity);
+				
+				
 				$attributeNames = getAttributeNames($data);
 			
 			?>
@@ -92,78 +119,7 @@
 
 
 <?php
-	function showTable($names,$results,$data,$entity){
 
-		// ECHO DATA
-		$tuples = $results->fetch_all(MYSQLI_ASSOC);
-		$titles = array();
-		if($tuples ==null){
-			echo "<h3>No data to display for " . $data . "<h3>";
-		}
-		if(!empty($tuples)){
-			$titles = array_keys($tuples[0]);
-		}
-		
-		//populate header with attribute names
-		echo '<tr>';
-		foreach($titles as $title){
-			echo '<th>';
-			echo $title;
-			echo '</th>';
-		}
-		echo '</tr>';
-		
-		//populate table data elements with data
-		foreach($tuples as $tuple){
-			echo '<tr>';
-			
-			
-			foreach($tuple as $title){
-				echo '<td>';
-				echo $title;
-				echo '</td>';
-			}
-			// add button to drop user
-			echo '<td class="drop">';
-			echo '<input type="radio" name="selected" value="'. $tuple[$entity] .'" required/>Drop';
-			echo '</td>';
-			
-			
-			echo '</tr>';
-		}
-	}
-	
-	// gets appropriate attribute titles for th elements
-	function getAttributeNames($data){
-		try{
-			$conn = mysqli_connect('localhost','root','','cosc360proj');
-			//$conn = openconnection();
-		}catch(PDOException $e){
-			die($e->getMessage());
-		}
-		
-		$sql = 'SHOW COLUMNS FROM ' . $data;
-		$result = mysqli_query($conn,$sql);
-		return $result;
-	}
-
-
-	// querys the db for data based on what you are trying to see
-	function getData($data){
-		try{
-			$conn = mysqli_connect('localhost','root','','cosc360proj');
-			//$conn = openconnection();
-		}catch(PDOException $e){
-			die($e->getMessage());
-		}
-		
-		$sql = 'SELECT * FROM ' . $data;
-		
-		
-		$results = mysqli_query($conn,$sql);		
-	
-		return $results;
-	}
 	
 	
 

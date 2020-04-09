@@ -10,7 +10,7 @@ I. Users Requirements
 	CARSON
  
 •Search for items/posts by keyword without registering (/2)
-	CARSON
+	CARSON DONE
 
 •Item and associated details stored in the database (/2)
 	TAHMEED / CARSON?
@@ -22,13 +22,13 @@ I. Users Requirements
 	TAHMEED
 
 •Allow user login by providing user id and password (/2)
-	CARSON
+	CARSON 	DONE
 
 •Create and comment on (specific for each project) when logged into the site (/2)
 	CARSON
  
 •Users are required to be able to view/edit their profile (/2) 
-	CARSON
+	CARSON	DONE
 
 •User password recovery (via email) (/4) 
 	TAHMEED
@@ -45,7 +45,7 @@ II. Website administrator’s objectives:
 	CARSON
 
 •Enable/disable users (/2)
-	CARSON 
+	CARSON DONE
  
 •Edit/remove items and comments (you must be able to add items to the store, along with images of the items as well as setting the required information) (/4) 
 	
