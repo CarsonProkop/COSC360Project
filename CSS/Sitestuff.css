@@ -1,0 +1,27 @@
+.sitestuff-body{
+	display:block;
+	text-align:center;
+}
+
+.tabs{
+	margin-left:5%;
+	width:90%;
+	height:10%;
+	background-color:#E0C9DD;
+}
+.tabs a{
+	margin:8%;
+	text-align:center;
+}
+.Data-area{
+	margin-bottom:5%;
+	text-align:center;
+}
+.Data-area table{
+	border:none;
+	width:90%;
+	margin-left:5%;
+}
+.Data-area th{
+	border: 1px solid black;
+}

@@ -15,29 +15,33 @@ a:active{
 	text-decoration:none;
 }
 
-header .siteTitle{
+.navlist .siteTitle{
 	font-family:"montserrat";
 	color:"white";
 	font-size:3em;
 	padding-top:1em;
 	
 }
+table,td{
+	border: 1px solid black;
+	border-collapse:collapse;
+}
 
-header table{
+.navlist table{
 	border-collapse:collapse;
 	width:100%;
 	border:none;
 }
-header td{
+.navlist td{
 	padding:0.5em;
 	margin-top:1em;
 	border:none;
 	text-align:center;
 }
-header ::placeholder{
+.navlist ::placeholder{
 	color:black;
 }
-header .search-cell{
+.navlist .search-cell{
 	text-align:none;
 }
 
@@ -49,7 +53,7 @@ header .search-cell{
 }
 
 
-header .siteSearch{
+.siteSearch{
 	height:2em;
 	background-color:#6E6788;
 	
@@ -57,7 +61,7 @@ header .siteSearch{
 	border-radius:10px;
 }
 
-header{
+.navlist{
 	background-color:#6E6788;
 	margin-left:0em;
 	margin-right:0em;
@@ -65,7 +69,7 @@ header{
 	margin-bottom :2em;
 	padding:0;
 }
-header a{
+.navlist a{
 	font-size:2em;
 }
 

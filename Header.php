@@ -30,13 +30,15 @@
 						if($user == null){
 							echo '<td><a class="userLogin" href="Login.php">login</a> <a>/</a> <a class="userLogin" href="SignUp.php">sign-up</a></td>';
 	
-						}else {
+						}else if($_SESSION['admin'] == 'false'){
 							if(file_exists('MEDIA/User/' . $_SESSION["authenticatedUser"] . '/prof-pic.jpg')){
 								echo '<td><img class="headerProfPic" src="'. $_SESSION["profPic"] . '"/><a class="userLogin" href="MyAccount.php"> My Account</a> <a>/</a> <a class="userLogin" href="LogOut.php">Log Out</a></td>';
 							}else{
 								echo '<td><img class="headerProfPic" src="MEDIA/Anonymous.png"/><a class="userLogin" href="MyAccount.php"> My Account</a> <a>/</a> <a class="userLogin" href="LogOut.php">Log Out</a></td>';
 							}
 							
+						}else if($_SESSION['admin'] = 'true'){
+							echo '<td><a class="userLogin" href="Sitestuff.php">Site stuff</a> <a>/</a> <a class="userLogin" href="LogOut.php">Log Out</a></td>';
 						}
 					
 					

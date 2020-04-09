@@ -37,6 +37,8 @@
 		</div>
 		
 		<div class="Blog-List">
+		
+		
 			<div class="entry">
 				<figure>
 				  <img src="MEDIA/Drake.jpg" alt="" />

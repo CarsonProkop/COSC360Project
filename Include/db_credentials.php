@@ -22,7 +22,11 @@
 	
 	function closeConn($pdo){
 		$pdo = null;
-		echo "connection closed";
+		
 	}
+	
+	
+	
+
 	
 ?>

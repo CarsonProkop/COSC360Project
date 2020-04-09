@@ -35,6 +35,16 @@
 			<form method="POST" action="validateLogin.php">
 				<p>Username:</p><input type="text" name="username"/><br>
 				<p>Password:</p><input type="password" name="password"/><br><br>
+				<p>Admin?</p>
+				Nope!<input type="radio" name="admin" value="false" checked>
+				yep<input type="radio" name="admin" value="true" 
+					<?php if(isset($_GET['admin'])){
+						if($_GET['admin'] == "true"){
+							echo "checked";
+						}
+					}	
+					?>>
+				<br>
 				<input type="submit" value="Log In"/>
 				
 			</form>

@@ -31,7 +31,7 @@
       <input class = "signin_input" type="password" name="password" placeholder="Password">
       <input id = "submit_1" type= "submit" name = "signin" value="Log in">
         <a id = "recovery_link" href = "recovery.php" > Forgot password?</a>
-        <a id = "recovery_link" href = "admin_signin.php" > Are you an admin? Log in here.</a>
+        <a id = "recovery_link" href = "Login.php?admin=true" > Are you an admin? Log in here.</a>
   </form>
   <section id = "main_right">
 <img class = "icons" id = "logo" src="MEDIA/Logo_base.jpg " alt="logo">
