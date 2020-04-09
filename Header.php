@@ -1,4 +1,5 @@
 	<?php 
+		date_default_timezone_set("America/Los_Angeles");
 		session_start();
 		if(isset($_SESSION["authenticatedUser"])){
 			$user = $_SESSION["authenticatedUser"];
@@ -29,8 +30,12 @@
 							echo '<td><a class="userLogin" href="Login.php">login</a> <a>/</a> <a class="userLogin" href="SignUp.php">sign-up</a></td>';
 	
 						}else {
+							if(file_exists('MEDIA/User/' . $_SESSION["authenticatedUser"] . '/prof-pic.jpg')){
+								echo '<td><img class="headerProfPic" src="'. $_SESSION["profPic"] . '"/><a class="userLogin" href="MyAccount.php"> My Account</a> <a>/</a> <a class="userLogin" href="LogOut.php">Log Out</a></td>';
+							}else{
+								echo '<td><a class="userLogin" href="MyAccount.php"> My Account</a> <a>/</a> <a class="userLogin" href="LogOut.php">Log Out</a></td>';
+							}
 							
-							echo '<td><img class="headerProfPic" src="'. $_SESSION["profPic"] . '"/><a class="userLogin" href="MyAccount.php"> My Account</a> <a>/</a> <a class="userLogin" href="LogOut.php">Log Out</a></td>';
 						}
 					
 					

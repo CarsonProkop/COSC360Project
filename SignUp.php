@@ -45,6 +45,7 @@
         <script> document.forms["signup"]["userid"].style.borderColor = "red"; </script>
         <?php endif ?>
         <input class="signup_input2" type="email" name="useremail" placeholder="Email">
+		<p>Birthday: </p><input class="signup_input2" type="date" name="birthday">
         <input class="signup_input2" type="password" name="userpwd" placeholder="Password">
         <input class="signup_input2" type="password" name="re_userpwd" placeholder="Confirm password">
         <input id="submit_2" type="submit" name="submit_Signup" value="Sign me up!">

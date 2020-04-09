@@ -1,6 +1,5 @@
 <?php 
 	session_start();
-	date_default_timezone_set("America/Los_Angeles");
 	
 	$user = $_SESSION["authenticatedUser"];
 	
@@ -34,6 +33,7 @@
 		echo "Error: " . $sql . "<br>";
 		echo $conn->error;
 	}
+	closeConn($conn);
 	
 	$blogDir = 'MEDIA/User/' . $user . '/' . $title;
 	mkdir($blogDir);

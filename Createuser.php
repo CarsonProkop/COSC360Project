@@ -1,38 +1,51 @@
 <?php 
-	
 	include 'Include/db_credentials.php';
 	
 	session_start();
-	if(isset($_POST['Fname']) && isset($_POST['Lname']) && isset($_POST['userid']) && isset($_POST['useremail']) && isset($_POST['userpwd']) && isset($_POST['re_userpwd'])){
+	if(isset($_POST['Fname']) && isset($_POST['Lname']) && isset($_POST['userid']) && isset($_POST['useremail']) && isset($_POST['userpwd']) && isset($_POST['re_userpwd']) && isset($_POST['birthday'])){
 		$firstName = $_POST['Fname'];
 		$lastName = $_POST['Lname'];
 		$email = $_POST['useremail'];
-		$un = $_POST['userid'];
-		$address = $_POST['address'];		
+		$un = $_POST['userid'];		
 		$pass = $_POST['userpwd'];
 		$rePass = $_POST['re_userpwd'];
+		$birthday = $_POST['birthday'];
+
+		// get current date and time
+		$todaysDate = date("y-m-d");
+		$currentTime = date("h:i:sa");
+		$dateCreated = '"' . $todaysDate . " " . substr(substr($currentTime, 0, -1),0,-1) . '"';
+
 		
-		
-		
-		
-		$dbconn = sqlsrv_connect($server, $connectionInfo);
-		if($dbConn === false){
-			die(print_r(sqlsrv_errors(), true));
+		// DB operations
+		try{
+			$conn = openconnection();
+			
+		}catch(PDOException $e){
+			echo '<script>alert("Error: ' . $e->error . '");</script>';
 		}
+		$sql = "INSERT INTO customers (first_name, last_name, user_name, email, birthday, password, date_signed_up) ";
+		$sql .=  "VALUES ('" . $firstName . "', '" . $lastName . "', '" . $un . "', '" . $email . "', '" . $birthday ."', '" . $pass . "', " . $dateCreated . ");";
 		
-		$sql = "INSERT INTO users (firstName, lastName, email, phonenum, address, city, state, postalCode, country, userid, password)";
-		$sql .=  "VALUES ('" . $firstName . "', '" . $lastName . "', '" . $email . "', '" . $phonenum . "', '" . $address ."', '" . $city . "', '" . $state . "', '" . $postalCode . "', '" . $country . "', '" . $userid . "' , '" . $pass . "')";
 		
-		$results = sqlsrv_query($dbConn, $sql, array());
-		
-		sqlsrv_close($dbConn);
-		
-		if($results != false){
-			header('location: Login.php');
+		if($conn->query($sql)){
+			
 		}else{
-			header('Location: SignUp.php');
+			echo '<script>alert("Error: '. $sql .'");</script>';
+			//header('location: didntwork.php');
+			
 		}
+		closeConn($conn);
+		
+		
+		// create user directory
+		mkdir('MEDIA/User/' . $un);
+		
+		
+		header('location: Login.php');
+		
+
+	}else{
+		echo '<script>alert("Not IN");</script>';
 	}
-
-
 ?>
