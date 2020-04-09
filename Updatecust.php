@@ -7,7 +7,7 @@
 	$email = $_POST['useremail'];
 	$bday = $_POST['birthday'];
 	
-	
+	$oldUN = $_SESSION['authenticatedUser'];
 	$userName = $_SESSION['authenticatedUser'];
 	$userDir = 'MEDIA/User/' . $userName . '/';
 	
@@ -24,7 +24,14 @@
 		$toUpdate['last_name'] = $lastName;
 	}
 	if(isset($_POST['userid'])){
+		
 		$userName = $_POST['userid'];
+		if($userName != $oldUN && file_exists($userDir)){
+			rename($userDir, 'MEDIA/User/' . $userName . '/');
+			$_SESSION['authenticatedUser'] = $userName;
+		}
+		
+		
 		$toUpdate['user_name'] = $userName;
 	}
 	
@@ -40,8 +47,11 @@
 		$about = $_POST['about'];
 		$toUpdate['about'] = $about;
 	}if(isset($_POST['olduserpwd']) && isset($_POST['newuserpwd']) && isset($_POST['re_userpwd'])){
-		$password = $_POST['newuserpwd'];
-		$toUpdate['password'] = $password;
+		if($_POST['olduserpwd'] != "" && $_POST['newuserpwd'] != "" && $_POST['re_userpwd'] != ""){
+			$password = $_POST['newuserpwd'];
+			$toUpdate['password'] = $password;	
+			
+		}
 	}
 	
 	
@@ -64,7 +74,7 @@
 	
 	$sql = substr(substr($sql,0,-1),0,-1);
 	
-	$sql .= ' WHERE user_name = "' . $userName . '";'; 
+	$sql .= ' WHERE user_name = "' . $oldUN . '";'; 
 	
 	//echo "<h3>" . $sql ."</h3>";
 
@@ -80,7 +90,7 @@
 	
 	
 	
-
+	
 	
 	
 	//	PROFILE PICTURE UPDATE
@@ -94,7 +104,7 @@
 				header("Location: MyAccount.php");
 			}
 		} else {
-			//echo '<script>alert("ERROR: Upload failed");</script>';
+			echo '<script>alert("ERROR: Upload failed");</script>';
 		}
 	}
 	
