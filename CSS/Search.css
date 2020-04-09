@@ -1,3 +1,31 @@
+.wrapper{
+	min-height:800px;
+	
+}
+
+
+.results{
+	background-color:#E0C9DD;
+	margin-left:5em;
+	margin-right:35em;
+	
+}
+.entry{
+	padding:1em;
+}
+
+.results img{
+	width:250px;
+	
+}
+
+
+.results figure{
+	float:left;
+	position:relative;
+}
+
+
 
 
 .Sort{
@@ -6,11 +34,6 @@
 	background-color:#E0C9DD;
 }
 
-.Blog-List{
-	background-color:#E0C9DD;
-	margin-left:5em;
-	margin-right:35em;
-}
 
 div .entry {
 	border-top: 2px solid #ff8800;
@@ -19,12 +42,15 @@ div .entry {
 }
 
 .linkbutton{
-	background: #ff8800;
+
 	border: none;
 	color: white;
 	padding:.5em;
 	float: right;
-	text-decoration: none;
+	border-radius:1em;
+	background-color:#69A89E;
+	text-decoration:none;
+	color:black;
 	
 }
 

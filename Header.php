@@ -41,7 +41,7 @@
 				<tr>
 					
 					<td colspan="2" class="search-cell">
-						<form action="search.php" method="POST">
+						<form action="Search.php" method="POST">
 							<input placeholder="Search" class="siteSearch" type="text" name="searchString"/>
 							<input type="submit" value="SEARCH">
 						</form>

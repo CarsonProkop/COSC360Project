@@ -90,7 +90,7 @@
 		
 		
 		<div class="other">
-		<h1>Other Blogs</h1>
+			<h1>Other Blogs</h1>
 			<div class="entry">
 			   <figure>
 				  <img src="MEDIA/Travis.jpg" alt="" />
