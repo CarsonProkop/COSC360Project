@@ -1,11 +1,12 @@
 <?php 
-    session_start();          
+    session_start();  
+	include 'Tools.php';
     $authenticatedUser = validateLogin();
 	if($authenticatedUser != null){
-		
 		header('Location: Home.php');
 	}else{
-		echo'<script>alert("Username or password not found");</script>';
+		//echo'<script>alert("Username or password not found");</script>';
+		header('Location: Login.php?message="Username or Password not found"');
 	}
     
 	function validateLogin()
@@ -30,7 +31,8 @@
 		
 		
 		// TODO: Check if userId and password match some customer account. If so, set retStr to be the username.
-		if($_POST['admin'] = 'true'){
+		if($_POST['admin'] == 'true'){
+			
 			//query from admins
 			$sql = 'SELECT adminUN,adminPW From admin';
 			
@@ -42,6 +44,7 @@
 			}
 			
 		}else{
+		
 			// query from standard users
 			$sql = "SELECT user_name, Password FROM customers;";
 			

@@ -89,6 +89,8 @@ table,td{
 	height:15px;
 	width:15px;
 	border-radius:50%;
+	height:50px;
+	width:50px;
 }
 
 .navlist{
@@ -98,8 +100,5 @@ table,td{
 	width:60%;
 	background-color:#E0C9DD;
 }
-.headerProfPic{
-	height:50px;
-	width:50px;
-}
+
 

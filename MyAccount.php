@@ -69,7 +69,7 @@
 			
 
 			<h1>User settings for <?php echo $userName;?>:</h1>
-			<img class = "icons" id = "logo" src="<?php echo $toDisplay; ?>" alt="logo"/>
+			<img height="100px" width="100px" border-radius="50px" class="current-prof-pic" src="<?php echo $toDisplay; ?>" alt="yourprofpic"/>
 			<form id="edit_prof" method="post" action="Updatecust.php" enctype="multipart/form-data">
 				<p id="Change-pic"> Change profile picture: <input type="file" name="newProfPic"/> </p>
 				<input class="signup_input1" type="text" placeholder="First name" name="Fname" value="<?php echo $firstName;?>">

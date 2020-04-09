@@ -1,7 +1,7 @@
 <?php 
 
 	include "header.php";
-
+	include 'Tools.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +12,7 @@
 	</head>
 	<body>
 		<?php 
+			
 			if (isset($_SESSION['authenticatedUser'])){
 				$authenticated = $_SESSION['authenticatedUser'];
 			}else{
@@ -35,6 +36,11 @@
 			<form method="POST" action="validateLogin.php">
 				<p>Username:</p><input type="text" name="username"/><br>
 				<p>Password:</p><input type="password" name="password"/><br><br>
+				<?php
+					if(isset($_GET['message'])){
+						echo '<font color="red">' . $_GET['message'] . '</font>';
+					}
+				?>
 				<p>Admin?</p>
 				Nope!<input type="radio" name="admin" value="false" checked>
 				yep<input type="radio" name="admin" value="true" 

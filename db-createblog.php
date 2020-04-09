@@ -45,7 +45,7 @@
             $location = '../uploads/';      
             if(move_uploaded_file($temp_name, $blogDir . '/photo.jpg')){
                 echo '<script>alert("Uploaded blog succesfully");</script>';
-				
+				header('Home.php');
             }
         } else {
             echo 'You should select a file to upload !!';
