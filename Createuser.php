@@ -3,18 +3,17 @@
 	include 'Include/db_credentials.php';
 	
 	session_start();
-	if(isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['email']) && isset($_POST['phonenum']) && isset($_POST['address']) && isset($_POST['city']) && isset($_POST['state']) && isset($_POST['postalCode']) && isset($_POST['country']) && isset($_POST['userid']) && isset($_POST['pass'])){
-		$firstName = $_POST['firstName'];
-		$lastName = $_POST['lastName'];
-		$email = $_POST['email'];
-		$phonenum = $_POST['phonenum'];
-		$address = $_POST['address'];
-		$city = $_POST['city'];
-		$state = $_POST['state'];
-		$postalCode = $_POST['postalCode'];
-		$country = $_POST['country'];
-		$userid = $_POST['userid'];
-		$pass = $_POST['pass'];
+	if(isset($_POST['Fname']) && isset($_POST['Lname']) && isset($_POST['userid']) && isset($_POST['useremail']) && isset($_POST['userpwd']) && isset($_POST['re_userpwd'])){
+		$firstName = $_POST['Fname'];
+		$lastName = $_POST['Lname'];
+		$email = $_POST['useremail'];
+		$un = $_POST['userid'];
+		$address = $_POST['address'];		
+		$pass = $_POST['userpwd'];
+		$rePass = $_POST['re_userpwd'];
+		
+		
+		
 		
 		$dbconn = sqlsrv_connect($server, $connectionInfo);
 		if($dbConn === false){

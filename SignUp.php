@@ -25,10 +25,10 @@
       <h1 class = "left_text"> Grow. <h1>
 </div>
 <div id = "right_side">
-  <form id = "sign_in" name="signin" method = "post" action = "include/login-inc.php" onsubmit="return validateSignIn()">
+  <form id = "sign_in" name="signin" method = "post" action = "validateLogin.php"/>
       <p id = "top_right"> Sign in here: </p>
-      <input class = "signin_input" type="text" name="exist_userid" placeholder="Username">
-      <input class = "signin_input" type="password" name="exist_pwd" placeholder="Password">
+      <input class = "signin_input" type="text" name="username" placeholder="Username">
+      <input class = "signin_input" type="password" name="password" placeholder="Password">
       <input id = "submit_1" type= "submit" name = "signin" value="Log in">
         <a id = "recovery_link" href = "recovery.php" > Forgot password?</a>
         <a id = "recovery_link" href = "admin_signin.php" > Are you an admin? Log in here.</a>
@@ -37,7 +37,7 @@
 <img class = "icons" id = "logo" src="MEDIA/Logo_base.jpg " alt="logo">
   <h1>Express yourself online</h1>
       <h3>Join Alpacapella today.</h3>
-      <form id="sign_up" name="signup" method="post" action="include/signup-inc.php" onsubmit="return validateSignUp()">
+      <form id="sign_up" name="signup" method="post" action="Createuser.php" >
         <input class="signup_input1" type="text" name="Fname" placeholder="First name">
         <input class="signup_input1" type="text" name="Lname" placeholder="Last name">
         <input class="signup_input2" type="text" name="userid" placeholder="Username">
