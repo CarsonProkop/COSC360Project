@@ -1,9 +1,13 @@
 $(document).ready(function(){
  $('.comment-form').on('submit', function(event){
   event.preventDefault();
+  console.log("submitting comment");
   var commentContent = $(this).find('.commentContent').val();
   commentContent = jQuery.trim(commentContent);
-  var blogId = $(this).find(('.blogId')).html();
+  //var blogId = $(this).find(('.blogId')).html();
+   var content = $(this).find(('.blogId')).html();
+     var userId = content.split('-')[1]; 
+    var blogId = content.split('-')[0]; 
   if(commentContent==''){alert("empty field");
    $(this).find(('.commentContent')).css('border-color', 'red');
   }
@@ -12,7 +16,7 @@ $(document).ready(function(){
   $.ajax({
    url:"include/insertComments.php",
    method:"POST",
-   data: {commentContent: "" + commentContent, blogId: "" + blogId},
+   data: {commentContent: "" + commentContent, blogId: "" + blogId, userId: userId},
    async: false,
    cache: false,
    success:function(data){

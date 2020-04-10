@@ -36,7 +36,7 @@ function displayContent_blogs($param1, $param2, $param3, $param4, $param5, $para
 		  <div class="numOfLikes"></div>Likes <p class="blogIdlike" style="display: none">' . $param7 . '</p>
 		</div>
 		<div class="comments">
-		 <a class="newlike" href="include/newLikePost.php" onClick = "putLike()" id="' . $param7 . '"><img src="client/images\002-thumbs-up-hand-symbol.svg" width = "50" height = "50"  /></a>
+		 <a class="newlike" href="include/newLikePost.php" id="' . $param7 .'-'.$param2. '"><img src="client/images\002-thumbs-up-hand-symbol.svg" width = "50" height = "50"  /></a>
 		 <form id="' . $param7 . '"class="comment-form" method="post" action="include/insertComments.php">
 		   <p class="blogId" style="display: none">' . $param7 .'-'.$param2. '</p>
 		   <p style = "text-align: left;"> Comment Section <p>
