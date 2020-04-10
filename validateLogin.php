@@ -1,4 +1,11 @@
 <?php 
+function debug_to_console($data) {
+	$output = $data;
+	if (is_array($output))
+		$output = implode(',', $output);
+  
+	echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+  }
     session_start();  
 	include 'Tools.php';
     $authenticatedUser = validateLogin();
@@ -12,7 +19,8 @@
 	function validateLogin()
 	{	  
 	    $user = $_POST["username"];	 
-	    $pw = $_POST["password"];
+		$pw = $_POST["password"];
+		debug_to_console($user);
 		$retStr = null;
 
 		if ($user == null || $pw == null)
@@ -53,6 +61,13 @@
 			while ($row = $results->fetch()) {
 				$uid = $row['user_name'];
 				$pas = $row['Password'];
+
+				if($user == $uid && $pw == $pas){
+					$retStr = "validated";
+				break;
+				}else{
+					$retStr = null;
+				}
 			}
 		}
 		
@@ -60,11 +75,6 @@
 		
 		
         
-        if($user == $uid && $pw == $pas){
-            $retStr = "validated";
-        }else{
-            $retStr = null;
-        }
 
 		closeConn($con);
         

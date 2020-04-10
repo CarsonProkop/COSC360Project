@@ -63,6 +63,6 @@ if ($conne->query($sql) === TRUE) {
 		
 		//header('location: Login.php');
 		
-		//echo "<script> window.location = 'http://localhost:8800/COSC360Project-1/Home.php';</script>"
+		echo "<script> window.location = 'http://localhost:8800/COSC360Project-1/Home.php';</script>"
 
 ?>
