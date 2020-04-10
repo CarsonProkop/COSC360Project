@@ -3,9 +3,9 @@
 <?php
 	// NEEDS TO BE CHANGED TO FIT OUR DB
 	function openconnection(){
-		$connectionString = "mysql:host=localhost;dbname=cosc360proj";
+		$connectionString = "mysql:host=localhost:8889;dbname=cosc360proj";
 		$user="root";
-		$pass="";
+		$pass="root";
 		$pdo = new PDO($connectionString, $user, $pass);
 		return $pdo;
 		/*

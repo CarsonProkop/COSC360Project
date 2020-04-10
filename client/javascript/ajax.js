@@ -27,13 +27,20 @@ $(document).ready(function(){
  });
  function load_comment()
  {
+    console.log( $('.blogId').length);
   for(var i=0;i < $('.blogId').length;i++){
     $('.output').eq(i).empty();
-   var blogId = $('.blogId').eq(i).html();
+    var content = $('.blogId').eq(i).html();
+     var userId = content.split('-')[1]; 
+    var blogId = content.split('-')[0]; 
+    console.log(content);
+    console.log(userId);
+    console.log(blogId);
+   console.log("loading");
   $.ajax({
    url:"include/getComments.php",
    method:"POST",
-   data: {blogId: blogId},
+   data: {blogId: blogId, userId: userId},
    async: false,
    cache: false,
    success:function(data)

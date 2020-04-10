@@ -1,22 +1,12 @@
 $(document).ready(function(){
- $('.newlike').on('click', function(event){
-   event.preventDefault();
-  var blogId =$(this).attr("id");
-  $.ajax({
-   url:"include/newLikePost.php",
-   method:"POST",
-   data: {blogId: "" + blogId},
-   async: false,
-   cache: false,
-   success:function(data){
-     load_likes();
-   },
-   error: function(data){
-    alert('failure');
-  }
- });
+  console.log("ready");
+ //
+//    console.log("like");
+//    event.preventDefault();
+   
+  
 
- });
+//  });
  function load_likes()
  {
   for(var i=0;i < $('.blogId').length;i++){
@@ -40,3 +30,26 @@ $(document).ready(function(){
  }
  load_likes();
 });
+function putLike (){
+  var blogId =$(this).attr("id");
+  $.ajax({
+   url:"include/newLikePost.php",
+   method:"POST",
+   data: {blogId: "" + blogId},
+   async: false,
+   cache: false,
+   success:function(data){
+     load_likes();
+   },
+   error: function(data){
+    alert('failure');
+  }
+ });
+}
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
