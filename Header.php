@@ -4,6 +4,7 @@
 		session_start();
 		if(isset($_SESSION["authenticatedUser"])){
 			$user = $_SESSION["authenticatedUser"];
+			
 		}else{
 			$user = NULL;
 		}

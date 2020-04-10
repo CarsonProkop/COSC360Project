@@ -11,10 +11,12 @@
   <link rel="logo icon" href="MEDIA/Logo_base.jpg" />
   <link rel="stylesheet" href="client/css/reset.css">
   <link rel="stylesheet" href="client/css/signup.css">
-  <script type="text/javascript" src="client/javascript/dropdown.js"></script>
-  <script type="text/javascript" src="client/javascript/validation.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src = "client/javascript/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="client/javascript/dropdown.js"></script>
+  <script type="text/javascript" src="client/javascript/validation.js"></script>
+  
+  
 </head>
 
 <body>
@@ -25,13 +27,13 @@
       <h1 class = "left_text"> Grow. <h1>
 </div>
 <div id = "right_side">
-  <form id = "sign_in" name="signin" method = "post" action = "validateLogin.php"/>
+  <form id = "sign_in" name="signin" method = "post" action = "validateLogin.php" onsubmit="return validateSignIn()"/>
       <p id = "top_right"> Sign in here: </p>
       <input class = "signin_input" type="text" name="username" placeholder="Username">
       <input class = "signin_input" type="password" name="password" placeholder="Password">
       <input id = "submit_1" type= "submit" name = "signin" value="Log in">
         <a id = "recovery_link" href = "recovery.php" > Forgot password?</a>
-        <a id = "recovery_link" href = "Login.php?admin=true" > Are you an admin? Log in here.</a>
+        <a id = "recovery_link" href = "admin_signin.php" > Are you an admin? Log in here.</a>
   </form>
   <section id = "main_right">
 <img class = "icons" id = "logo" src="MEDIA/Logo_base.jpg " alt="logo">
@@ -48,8 +50,10 @@
 		<p>Birthday: </p><input class="signup_input2" type="date" name="birthday">
         <input class="signup_input2" type="password" name="userpwd" placeholder="Password">
         <input class="signup_input2" type="password" name="re_userpwd" placeholder="Confirm password">
-        <input id="submit_2" type="submit" name="submit_Signup" value="Sign me up!">
-      </form>
+        <input id = 's' type="submit" style="display: none;" name="submit_Signup" >
+        </form>
+        <button id = "submit_2"  >"Sign me up!"</button>
+      
       </section>
       <p id="sneak"> Sneak in with minimum accessibility? <a href="Home.php"> Enter</a> </p>
     </div>

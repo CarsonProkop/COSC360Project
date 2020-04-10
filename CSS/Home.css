@@ -4,9 +4,16 @@
 /* body styling */
 body{
 	background-color:#EAEAEA;
+ 	
 }
+#home{
+	display: block;
+	margin-top: 70%;
+}
+#main{
+	margin-bottom: 10%;
 
-
+}
 /* -----------------Main and OtherStyling  ------------------*/
 #main, .other, .auxContent{
 	margin-left:5em;
@@ -25,13 +32,12 @@ body{
 	
 }
 #mainElement{
-	float:left;
+	float: right;
 	height:300px;
-	vertical-align:auto;
 	width:30em;
+	display: block;
 }
 #mainElement figure{
-	position:relative;
 	width:400px;
 	vertical-align:center;
 	margin-bottom:4em;
@@ -40,7 +46,6 @@ body{
 	height:2em;
 	font-size:1.5em;
 	width:400px;
-	position:absolute;
 	bottom:0px;
 	
 }
@@ -77,6 +82,7 @@ body{
 }
 
 .auxContent{
+	float: left;
 	margin-top:4em;
 	padding:0em;
 }

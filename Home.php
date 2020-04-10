@@ -138,24 +138,10 @@ function trending_posts()
 	include 'Media.php';
 	?>
 
-
+<div id= "home">
 	<div id="main">
 		<div class="featureContent">
-			<?php
-			//debug_to_console("dead");
-			$result = query_all();
-		//	debug_to_console($result);
-			//$resultCheck = mysqli_num_rows($result);
-			//if ($resultCheck > 0) {
-				$noblog = true;
-				while ($row = $result->fetch()) {
-					$noblog = false;
-					displayContent_blogs($row['title'], $row['opID'], date('Y-m-d', strtotime($row['upload_date'])), date('h:i a', strtotime($row['upload_date'])), $row['content'], $row['image_path'], $row['blogId']);
-				}
-			 if ($noblog == true) 
-				echo "<h1 style ='border-bottom: 1px solid black;'> No blogs at the moment! <br> Check back again to see if someone posts.</h1>";
 			
-			?>
 			<h1>Feature Content </h1>
 			<div id="mainElement">
 				<figure>
@@ -167,7 +153,7 @@ function trending_posts()
 	</div>
 
 
-	<div class="auxContent">
+	<div class="auxContent" >
 		<table>
 			<tr>
 				<td class="aux1-img">
@@ -205,7 +191,22 @@ function trending_posts()
 
 		</table>
 	</div>
-
+	<div class = blogs>
+	<?php
+			//debug_to_console("dead");
+			$result = query_all();
+		//	debug_to_console($result);
+			//$resultCheck = mysqli_num_rows($result);
+			//if ($resultCheck > 0) {
+				$noblog = true;
+				while ($row = $result->fetch()) {
+					$noblog = false;
+					displayContent_blogs($row['title'], $row['opID'], date('Y-m-d', strtotime($row['upload_date'])), date('h:i a', strtotime($row['upload_date'])), $row['content'], $row['image_path'], $row['blogId']);
+				}
+			 if ($noblog == true) 
+				echo "<h1 style ='border-bottom: 1px solid black;'> No blogs at the moment! <br> Check back again to see if someone posts.</h1>";
+			
+			?>
 
 	<div class="memes">
 
@@ -252,7 +253,7 @@ function trending_posts()
 	?>
 <script type="text/javascript" src="client/javascript/ajax.js"></script>
  <script type="text/javascript" src="client/javascript/ajaxLikes.js"></script>
-
+	</div>
 </body>
 
 </html>
